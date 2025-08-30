@@ -1,0 +1,32 @@
+<app-header>
+
+</app-header>
+<section id="news">
+    <div class="container">
+        <div class="title text-center">
+            <h1>Coursess we offered</h1>
+            <p>Speed up the loan process</p>
+        </div>
+        <div class="row">
+            <div class="col col-md-3 col-sm-6 col-12" *ngFor="let course of coursess">
+                <div class="card">
+                    <img [src]="course.img" alt="" height="200px">
+                    <h3 class="card-title  text-danger">{{course.title}}</h3>
+                    <p class="card-text">{{course.paragraph}}</p>
+                    <button class="btn btn-success w-50">fee {{course.fees}}/-</button>
+                    <button class="btn btn-info mx-2 w-25">{{course.duration}}</button>
+                    <button class="btn btn-danger w-50" (click)="getCourse('Angular is the best language')">{{course.more}}</button>
+                </div>
+            </div>
+        </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+    </div>
+  
+  
+</section>
+<app-footer></app-footer>

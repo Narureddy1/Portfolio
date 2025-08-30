@@ -1,0 +1,42 @@
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif; /* or your preferred font */
+  line-height: 1.5;
+  
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+  .social-icon:hover {
+    color: #00f7ff;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .circle-img {
+    border: 6px solid #17a2b8;
+    border-radius: 50%;
+    padding: 8px;
+    display: inline-block;
+    background-color:white;
+  }
+  .circle-img:hover{
+    
+    padding: 6px;
+    
+  }
+  img:hover{
+    padding: 2px;
+  }
+  section{
+    background-color: rgb(113, 94, 64);
+  }
+  .text{
+    margin: 100px 0 140px 100px;
+  }

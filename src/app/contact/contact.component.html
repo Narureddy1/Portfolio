@@ -1,0 +1,24 @@
+<app-header></app-header>
+   <div class="container">
+         <div class="text-center" [ngClass]="clr"><!--atribute directives-->
+            <h1>Welcome to class Binding</h1>
+        </div>
+   </div>
+    <div class="text-center">
+        <button class="btn btn-danger" (click)="red()">Red</button><!--atribute directives-->
+        <button class="btn btn-success mx-3" (click)="green()">green</button>
+        <button class="btn btn-primary" (click)="blue()">blue</button>
+    </div>
+
+    <div class="text-center" [ngStyle]="sty"><!--atribute directives-->
+        <h1>Welcome to style B</h1>
+    </div>
+    <div class="text-center" [ngSwitch]="course"><!--atribute directives-->
+        <h1 *ngSwitch="'angular'">You choose Angular Course</h1><!--strectural directives-->
+        <h1 *ngSwitch="'python'">You choose Python Course</h1>
+        <h1 *ngSwitch="'react'">You choose React Course</h1>
+        <h1 *ngSwitch="'Nodejs'">You choose Nodejs Course</h1>
+        <h1 *ngSwitch="'java'">You choose java Course</h1>
+        <h1 *ngSwitchDefault>You choose wrong Course</h1>
+    </div>
+<app-footer></app-footer>

@@ -1,0 +1,11 @@
+.nav-item :hover{
+    
+    color: aqua;
+    border-radius: 5px;
+    font:bold;
+}
+.navbar{
+    background-color: black;
+}
+
+

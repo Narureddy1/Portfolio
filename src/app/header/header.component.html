@@ -1,0 +1,35 @@
+<section> 
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-5 " href="dashbord"><strong>Portfolio</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav display-flex">
+          <ng-container *ngFor="let menu of navs"><!--strectural directives-->
+            <li class="nav-item mx-4" *ngIf="menu.sub.length===0"><!--strectural directives-->
+              <a class="nav-link" routerLink="{{menu.url}}" >{{menu.name}}</a> <!--proparty Binding-->
+            </li>
+            <li class="nav-item dropdown" *ngIf="menu.sub.lenght>0"><!--strectural directives-->
+              <a class="nav-link dropdown-toggle" [href]="menu.url" role="button" data-bs-toggle="dropdown">{{menu.name}}</a>
+              
+              <ul class="dropdown-menu">
+                <ng-container *ngFor="let submenu of menu.sub"><!--strectural directives-->
+                  <li><a class="dropdown-item" [href]="submenu.url">{{submenu.name}}</a></li>
+                </ng-container>
+              </ul>
+            </li>
+          </ng-container>
+    
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</section>
+
+<section>
+  
+
+</section>

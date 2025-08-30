@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<section class="container text-center">
+    <div class="container text-center mt-5 mb-5">
+      <h1>Education</h1>
+      <p >All about my educution details</p>
+    </div>
+    <table class="table table-striped table-bordered table-hover">
+      
+        <tr>
+          <th>SNo</th>
+          <th>Name</th>
+          <th>image</th>
+          <th>place</th>
+          <th>year</th>
+          <th>percentage</th>
+        </tr>
+        
+        <tr *ngFor="let tables of table">
+          <td>{{tables.sno}}</td>
+          <td>{{tables.name}}</td>
+          <td><img src="../images/{{tables.img}}" alt=""></td>
+          <td class="text-center">{{tables.data}}</td>
+          <td>{{tables.fees}}</td>
+          <td>{{tables.total}}</td>
+        </tr>
+      
+    </table>
+</section>
+
+
+
+  
+
+<app-footer></app-footer>
