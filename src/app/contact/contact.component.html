@@ -1,24 +1,33 @@
-<app-header></app-header>
-   <div class="container">
-         <div class="text-center" [ngClass]="clr"><!--atribute directives-->
-            <h1>Welcome to class Binding</h1>
-        </div>
-   </div>
-    <div class="text-center">
-        <button class="btn btn-danger" (click)="red()">Red</button><!--atribute directives-->
-        <button class="btn btn-success mx-3" (click)="green()">green</button>
-        <button class="btn btn-primary" (click)="blue()">blue</button>
-    </div>
 
-    <div class="text-center" [ngStyle]="sty"><!--atribute directives-->
-        <h1>Welcome to style B</h1>
+
+<app-header></app-header>
+<img src="../images/judo.png" alt="" width="100%" height="400">
+
+<section class="container mx-auto">
+    <div class="container-fluid card mt-3 mb-3 p-4 shadow-lg">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="text-center"><i class="fa-solid fa-phone"></i></h2>
+                <p>If you have any questions, feel free to reach out to us through the following contact details or by filling out the contact form below.</p>
+                <h4>Address:</h4>
+                <p>Andra Pradesh, India, 523328</p>
+                <h4>Phone:</h4>
+                <p>62814 63418</p>
+                <h4>Email:</h4>
+                <p>naruramanareddy&#64;3gmail.com</p>
+                <p>
+            </div>
+            <div class="col text-center">
+                <h2><i class="fa-solid fa-envelope"></i></h2>
+                <p>If you have any questions, feel free to reach out to us through the following contact details or by filling out the contact form below.</p>
+                <h4>Address:</h4>
+                <p>Bengaluru, karnataka, India, 523328</p>
+                <p>
+                <h4>Directly Send Mail: </h4>
+                <a href="/Send_message"><button type="button" class="btn btn-primary">Send Mail</button></a>
+                    
+            </div>
+        </div>
     </div>
-    <div class="text-center" [ngSwitch]="course"><!--atribute directives-->
-        <h1 *ngSwitch="'angular'">You choose Angular Course</h1><!--strectural directives-->
-        <h1 *ngSwitch="'python'">You choose Python Course</h1>
-        <h1 *ngSwitch="'react'">You choose React Course</h1>
-        <h1 *ngSwitch="'Nodejs'">You choose Nodejs Course</h1>
-        <h1 *ngSwitch="'java'">You choose java Course</h1>
-        <h1 *ngSwitchDefault>You choose wrong Course</h1>
-    </div>
+</section>
 <app-footer></app-footer>

@@ -7,63 +7,57 @@
     <div class="container">
       <div class="title text-center mb-4">
         <h1 class="display-5">Courses I'm Good At</h1>
-        <p class="lead">Updating my skills with modern technologies</p>
+        <p class="lead">The following coursess i am perfect.</p>
       </div>
 
       <div class="row">
-        <!-- Java Card -->
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+
+        <!-- Course Cards -->
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4" *ngFor="let item of course">
           <div class="card shadow-sm h-100 border-0 rounded-4 hover-card">
-            <img src="../images/java.jpg" class="card-img-top" alt="Java Full Stack" height="200px">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Java Full Stack</h5>
-              <p class="card-text">A complete stack for backend and frontend using Java, Spring Boot, and Angular.</p>
+            <div class="card-body d-flex flex-column">
+              <img [src]="item.img" [alt]="item.title" class="card-img-top" height="200px">
+              <h3 class="card-title text-danger mt-3">{{item.title | titlecase}}</h3>
+              <p class="card-text">{{item.paragraph}}</p>
             </div>
-            <div class="card-footer text-muted">Last updated: 29/03/2023</div>
           </div>
         </div>
 
-        <!-- HTML Card -->
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card shadow-sm h-100 border-0 rounded-4 hover-card">
-            <img src="../images/html.png" class="card-img-top" alt="HTML" height="200px">
-            <div class="card-body">
-              <h5 class="card-title text-primary">HTML</h5>
-              <p class="card-text">HTML is the backbone of web design, structuring content on the internet.</p>
-            </div>
-            <div class="card-footer text-muted">Last updated: 29/03/2023</div>
-          </div>
-        </div>
-
-        <!-- Bootstrap Card -->
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card shadow-sm h-100 border-0 rounded-4 hover-card">
-            <img src="../images/bootstrap.jpg" class="card-img-top" alt="Bootstrap" height="200px">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Bootstrap</h5>
-              <p class="card-text">Bootstrap helps build responsive websites quickly using ready-made components.</p>
-            </div>
-            <div class="card-footer text-muted">Last updated: 29/03/2023</div>
-          </div>
-        </div>
-
-        <!-- Angular Card -->
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card shadow-sm h-100 border-0 rounded-4 hover-card">
-            <img src="../images/angular.jpg" class="card-img-top" alt="Angular" height="200px">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Angular</h5>
-              <p class="card-text">Angular is a powerful framework for building dynamic single-page applications.</p>
-            </div>
-            <div class="card-footer text-muted">Last updated: 29/03/2023</div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
-</main>
+
+
+  <section id="item">
+    <div class="container">
+
+      <div class="title text-center mb-4">
+        <h1 class="display-5">Projects I have done so far</h1>
+        <p class="lead">The following are the projects i have done so far.</p>
+      </div>
+      
+      <!-- Loop over each project here -->
+      <div *ngFor="let featuredCours of featuredCourse; let i = index" class="container my-5">
+        <!-- Use 'flex-row-reverse' on even rows for alternating layout -->
+        <div class="row align-items-center border border-4 p-3 rounded-4" [class.flex-row-reverse]="i % 2 !== 0">
+          <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+              <h2>{{ featuredCours.title }}</h2>
+              <ul>
+                <li *ngFor="let detail of featuredCours.details">{{ detail }}</li>
+              </ul>
+              <a href="#" class="btn btn-primary">Explore More</a>
+          </div>
+          <div class="col-lg-4 col-md-12 ">
+              <img [src]="featuredCours.imageUrl" class="img-fluid rounded" alt="Featured Course Image">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+   
+
 
 <app-footer></app-footer>
 
 <!-- Optional: Add this CSS for hover effect -->
-

@@ -1,12 +1,6 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; // Import HttpClient
 
-interface Message {
-  name: string;
-  email: string;
-  subject: string;
-  messageContent: string;
-}
+import { Component } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-send-message',
@@ -14,32 +8,39 @@ interface Message {
   styleUrls: ['./send-message.component.css']
 })
 export class SendMessageComponent {
-  message: Message = {
+  formData = {
+    title: '',
     name: '',
-    email: '',
+    time: '',
+    from_email: '',
     subject: '',
-    messageContent: ''
+    message: '',
+    email: ''
   };
-  formStatus: 'success' | 'error' | null = null;
 
-  constructor(private http: HttpClient) { } // Inject HttpClient
+  buttonText: string = 'Send Email';
+  loading: boolean = false;
 
-  sendMessage() {
-    // This is where you would send the message data to your backend server.
-    // Replace 'YOUR_BACKEND_API_ENDPOINT' with the actual URL of your backend.
-    const backendUrl = 'http://localhost:3000/send-email'; // Example backend URL
+  sendEmail() {
+    this.loading = true;
+    this.buttonText = 'Sending...';
 
-    this.http.post(backendUrl, this.message).subscribe({
-      next: (response) => {
-        console.log('Message sent successfully!', response);
-        this.formStatus = 'success';
-        // Optionally, reset the form after successful submission
-        this.message = { name: '', email: '', subject: '', messageContent: '' };
-      },
-      error: (error) => {
-        console.error('Error sending message:', error);
-        this.formStatus = 'error';
-      }
-    });
+    const serviceID = 'default_service';
+    const templateID = 'template_r2sspgi';
+    const publicKey = 'ndj093Q_OqOmviFXX'; // your EmailJS public key
+
+    emailjs.init(publicKey);
+
+    emailjs.send(serviceID, templateID, this.formData)
+      .then(() => {
+        this.loading = false;
+        this.buttonText = 'Send Email';
+        alert('Message Sent!');
+        this.formData = { title: '', name: '', time: '', from_email: '', subject: '', message: '', email: '' };
+      }, (err: EmailJSResponseStatus) => {
+        this.loading = false;
+        this.buttonText = 'Send Email';
+        alert(JSON.stringify(err));
+      });
   }
 }

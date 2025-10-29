@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(51, 50, 50);
+  color: white;
 }
 body {
   font-family: Arial, sans-serif; /* or your preferred font */
@@ -34,9 +36,8 @@ body {
   img:hover{
     padding: 2px;
   }
-  section{
-    background-color: rgb(113, 94, 64);
-  }
+  
   .text{
     margin: 100px 0 140px 100px;
   }
+ 

@@ -1,44 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
-public table:any[] = [
-  {
-    sno : 1,
-    name : "New Horizon College of Engenering",
-    img : "../images/angular.jpg",
-    data : "Marathahalli, Bengaluru, karnataka",
-    fees : "2024-2026",
-    total : "82 %"
-  },
-  {
-    sno : 2,
-    name : "Vasavi Degree College",
-    img : "bootstrap.jfif",
-    data : "Narasaraopet, Gunture(Dts), Andhra Pradesh",
-    fees : "2021-2024",
-    total : "85 %"
-  },
-  {
-    sno : 3,
-    name : "Vikas junior college",
-    img : "csharp.png",
-    data : "Narasaraopet, Gunture(Dts), Andhra predesh",
-    fees : "2019-2021",
-    total : "72 %"
-  },
-  {
-    sno : 4,
-    name : "Ravindra High School",
-    img : "css.png",
-    data : "Vinukonda, Palnadu(Dts), Andhra Predesh",
-    fees : "2018-2019",
-    total : "92 %"
+export class AboutComponent implements OnInit{
+  public coursess : any [] =[
+    {
+      img : "../images/InternPy.jpeg",
+      title : "python Internship",
+      paragraph : "It certifies that Naru Ramana Reddy (Y213214138) from Vasavi Degree College, Narasaraopeta, has successfully completed a Long Term Internship in Python Programming.",
+        Duration : "From 18/01/2024 to 19/04/2024",
+      Issued : "22/04/2024",
+      Id : "UCE24VDC103",
+      IssuedAt : "UrChice Computer Education, Sattenapalli, Sattenapalli, Palnadu District, Andhra Pradesh, India",
+      
+    },
+    {
+      img : "../images/CareerNinja.jpeg",
+      title : "Advance Java",
+      paragraph : " This image is a Certificate of Achievement awarded by CareerNinja (LearnTube). It certifies that Ramanareddy Naru has successfully completed the course Java Advanced (English)",
+        Duration : "From 18/08/2023 to 17/17/2023",
+      Issued : "12/17/2023",
+      Id : "JAV20238251X",
+      IssuedBy : "Shronit Ladhani, Founder and CEO, CareerNinja",
+      
+    },
+   
+  ]
+
+  constructor(){}
+  ngOnInit(): void {}
+
+  getCourse(x:any){
+    console.log(x)
   }
-]
 }
 

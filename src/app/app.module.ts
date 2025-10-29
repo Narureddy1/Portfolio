@@ -8,7 +8,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoursessComponent } from './coursess/coursess.component';
 import { RegesterComponent } from './regester/regester.component';
-import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HtmlComponent } from './html/html.component';
@@ -33,7 +32,6 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
     ContactComponent,
     CoursessComponent,
     RegesterComponent,
-    LoginComponent,
     FooterComponent,
     HeaderComponent,
     HtmlComponent,

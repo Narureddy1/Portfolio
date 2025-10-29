@@ -39,7 +39,12 @@ export class CoursessComponent implements OnInit{
       duration : "1year",
       more : "Read More"
     }
-  ]
+  ];
+  featuredCourse = {
+    title: 'Mastering Angular: From Beginner to Pro',
+    content: 'Dive deep into the Angular framework and learn to build powerful, scalable web applications. This course covers everything from the basics of components and services to advanced topics like RxJS, state management, and performance optimization. Join us to become an Angular expert!',
+    imageUrl: 'assets/images/featured-course.jpg' // Make sure you have an image at this path
+  };
 
   constructor(){}
   ngOnInit(): void {}

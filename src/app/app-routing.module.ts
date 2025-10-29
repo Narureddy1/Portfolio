@@ -6,7 +6,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoursessComponent } from './coursess/coursess.component';
 import { RegesterComponent } from './regester/regester.component';
-import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
@@ -20,7 +19,7 @@ import { SendMessageComponent } from './send-message/send-message.component';
 const routes: Routes = [
   {
     path : "",
-    component : LoginComponent
+    component : Home1Component
   },
   {
     path: "home1",
@@ -46,10 +45,7 @@ const routes: Routes = [
     path : "regester",
     component : RegesterComponent
   },
-  {
-    path : "login",
-    component : LoginComponent
-  },
+  
   {
     path : "header",
     component : HeaderComponent

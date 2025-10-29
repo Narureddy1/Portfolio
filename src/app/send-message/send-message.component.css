@@ -1,50 +1,26 @@
-.contact-form {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+.field {
+  margin-bottom: 10px;
 }
 
-.contact-form h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 25px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
+.field label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
+  font-size: 12px;
+  color: #777;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.form-group textarea {
-  resize: vertical; /* Allows vertical resizing of the textarea */
-}
-
-button[type="submit"] {
+.field input {
   display: block;
-  width: 100%;
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 18px;
@@ -52,25 +28,13 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover:not(:disabled) {
-  background-color: #0056b3;
+.submit{
+  border-radius: 5px;
 }
-
-button[type="submit"]:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
+.card{
+  margin-top: 30px;
+  background-color: #4d4a4a;
 }
-
-.success {
-  color: green;
-  margin-top: 10px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.error {
-  color: red;
-  margin-top: 10px;
-  text-align: center;
-  font-weight: bold;
+section{
+  background-color: rgb(52, 49, 49);
 }

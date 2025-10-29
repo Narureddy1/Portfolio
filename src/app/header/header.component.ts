@@ -12,7 +12,7 @@ export class HeaderComponent {
 
 public navs : any [] = [
   {
-    name: "home1",
+    name: "Home",
     url:"/home1",
     sub : []
   },
@@ -22,22 +22,22 @@ public navs : any [] = [
     sub : []
   },*/
   {
-    name : "about",
+    name : "About",
     url : "/about",
     sub : []
   },
   {
-    name : "contact",
+    name : "Contact",
     url : "/contact",
     sub : []
   },
   {
-    name : "home",
+    name : "Skills",
     url : "/home",
     sub : []
   },
   {
-    name : "coursess",
+    name : "Coursess",
     url : "/coursess",
     sub :[
           {
@@ -56,7 +56,7 @@ public navs : any [] = [
   },
   
   {
-    name : "dashbord",
+    name : "Dashbord",
     url : "/dashbord",
     sub : []
   },
@@ -65,11 +65,7 @@ public navs : any [] = [
     url : "",
     sub : []
   },
-  {
-    name : "regester",
-    url : "/regester",
-    sub : []
-  },
+  
   {
     name : "Send_message",
     url : "/Send_message",
